@@ -1,4 +1,5 @@
 import React from "react";
+import "./Card.css";
 
 const Card = ({ pokemon }) => {
   return (
@@ -9,9 +10,9 @@ const Card = ({ pokemon }) => {
       <h3 className="cardName">{pokemon.name}</h3>
       <div className="cardTypes">
         <div>タイプ</div>
-        {pokemon.types.map((type) => {
+        {pokemon.types.map((type, i) => {
           return (
-            <div>
+            <div key={i}>
               <span className="typeName">{type.type.name}</span>
             </div>
           );
